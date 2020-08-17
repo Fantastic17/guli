@@ -1,0 +1,23 @@
+server:
+  port: 8130 # 服务端口
+
+spring:
+  profiles:
+    active: dev # 环境设置
+  application:
+    name: service-vod # 服务名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # nacos服务地址
+  servlet:
+    multipart:
+      max-file-size: 1024MB # 最大上传单个文件大小：默认1M
+      max-request-size: 1024MB # 最大置总上传的数据大小 ：默认10M
+
+aliyun:
+  vod:
+    keyid: LTAI4GAixFW9oX3k4Bwfi5qG
+    keysecret: OAIy26hoqqKI1EyocwtNPZEYRKcrLs
+    templateGroupId: 47b37cf5fe6a24bcdc995b9c862c83f4 #转码模板组id
+    workflowId: 31787bd87b6c93e13800cf8be6302f84 #工作流id
